@@ -1,0 +1,53 @@
+@keyframes float{
+
+0%{transform:translateY(0px);}
+
+50%{transform:translateY(-8px);}
+
+100%{transform:translateY(0px);}
+
+}
+
+@keyframes glow{
+
+0%{
+
+filter:drop-shadow(0 0 15px #8b5cf6);
+
+}
+
+50%{
+
+filter:drop-shadow(0 0 40px #22d3ee);
+
+}
+
+100%{
+
+filter:drop-shadow(0 0 15px #8b5cf6);
+
+}
+
+}
+
+@keyframes pulseGlow{
+
+0%{
+
+box-shadow:0 0 20px rgba(168,85,247,.3);
+
+}
+
+50%{
+
+box-shadow:0 0 50px rgba(34,211,238,.45);
+
+}
+
+100%{
+
+box-shadow:0 0 20px rgba(168,85,247,.3);
+
+}
+
+}

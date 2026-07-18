@@ -1,58 +1,78 @@
 @import "tailwindcss";
+@import "./styles/theme.css";
+@import "./styles/animations.css";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
 }
 
 body {
-  background: #0d1117;
+  margin: 0;
+  overflow: hidden;
+
+  font-family:
+    Inter,
+    SF Pro Display,
+    system-ui,
+    sans-serif;
+
+  background:
+    radial-gradient(circle at top left,#331155 0%,transparent 45%),
+    radial-gradient(circle at bottom right,#0a5d78 0%,transparent 45%),
+    #060816;
+
   color: white;
-  font-family: Arial, sans-serif;
 }
 
-.app {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.header {
-  padding: 20px;
-  text-align: center;
-  border-bottom: 1px solid #222;
+::-webkit-scrollbar-thumb {
+  background: #6d28d9;
+  border-radius: 999px;
 }
 
-.main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+/* Glass */
+
+.glass {
+
+  background: rgba(255,255,255,.05);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+      0 0 60px rgba(139,92,246,.12);
 }
 
-.mic {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  border: none;
-  font-size: 35px;
-  cursor: pointer;
+/* Neon */
+
+.neon-border{
+
+border:1px solid rgba(34,211,238,.35);
+
+box-shadow:
+0 0 20px rgba(34,211,238,.20);
+
 }
 
-.conversation {
-  width: 70%;
-  max-width: 700px;
-  min-height: 150px;
-  border: 1px solid #333;
-  padding: 20px;
-  border-radius: 10px;
-}
+/* Glow */
 
-footer {
-  padding: 15px;
-  text-align: center;
-  border-top: 1px solid #222;
+.glow{
+
+box-shadow:
+
+0 0 40px rgba(168,85,247,.45);
+
 }
